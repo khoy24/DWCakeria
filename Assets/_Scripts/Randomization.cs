@@ -18,7 +18,7 @@ public class Randomization : MonoBehaviour
         string[] baseOptions = baseFile.text.Split('\n');
         string[] frostingOptions = frostingFile.text.Split('\n');
         string[] tierOptions = tierFile.text.Split('\n');
-        string[] toppingsOptions = toppingsFile.text.Split('\n')
+        string[] toppingsOptions = toppingsFile.text.Split('\n');
 
         string randomBase = baseOptions[Random.Range(0, baseOptions.Length)];
         string randomFrosting = frostingOptions[Random.Range(0, frostingOptions.Length)];
