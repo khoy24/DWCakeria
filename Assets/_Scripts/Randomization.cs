@@ -3,7 +3,7 @@ using UnityEngine;
 public class Randomization : MonoBehaviour
 {
     //spawnNewCustomer
-    public Sprites[] customerSprites;
+    public Sprite[] customerSprites;
     public SpriteRenderer displayRenderer;
 
     //generateOrder()
@@ -35,9 +35,10 @@ public class Randomization : MonoBehaviour
     }
 
     public void spawnNewCustomer() {
-        Sprite randomSprite = customerSprites[Random.Range(0, customerSprites.Length)].sprite;
-        displayRenderer.sprite = customerSprites[randomSprite];
-        Debug.Log("A new customer has arrived!");
+        int randomIndex = Random.Range(0, customerSprites.Length);
+        displayRenderer.sprite = customerSprites[randomIndex];
+        
+        Debug.Log("A new customer has arrived! Index: " + randomIndex);
     }
 
     // Update is called once per frame
