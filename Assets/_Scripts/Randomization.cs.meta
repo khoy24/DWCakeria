@@ -1,2 +1,16 @@
 fileFormatVersion: 2
 guid: 07b012451c340364db18814306390881
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - baseFile: {fileID: 4900000, guid: e7ff96db1d627f240ad872f092141936, type: 3}
+  - frostingFile: {fileID: 4900000, guid: 12ea1f1c79efd694e82722683e2f021e, type: 3}
+  - tierFile: {fileID: 4900000, guid: 40b736d1dda25a74799776f4f3ba2a93, type: 3}
+  - toppingsFile: {fileID: 4900000, guid: bf5f3d10c2db5bc4e8e9f58db5e6abe6, type: 3}
+  - dialougeFile: {fileID: 4900000, guid: c3002908f130d58459f9ea658554f135, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
