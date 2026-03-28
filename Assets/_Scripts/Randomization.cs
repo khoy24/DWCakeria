@@ -25,7 +25,7 @@ public class Randomization : MonoBehaviour
         //generateOrder();  
     }
 
-    public void generateOrder()
+    public string generateOrder()
     {
         string[] baseOptions = baseFile.text.Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
         string[] frostingOptions = frostingFile.text.Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
