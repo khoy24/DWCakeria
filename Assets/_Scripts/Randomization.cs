@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class Randomization : MonoBehaviour
@@ -13,11 +14,15 @@ public class Randomization : MonoBehaviour
     public TextAsset tierFile;
     public TextAsset toppingsFile;
 
+    //chatBubble
+        public GameObject chatBubble;
+        public TextMeshProUGUI chatText;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spawnNewCustomer();
-        generateOrder();  
+        //generateOrder();  
     }
 
     public void generateOrder()
@@ -40,6 +45,12 @@ public class Randomization : MonoBehaviour
         displayRenderer.sprite = customerSprites[randomIndex];
         
         Debug.Log("A new customer has arrived! Index: " + randomIndex);
+
+        string order = generateOrder();
+
+        chatText.text = order;
+
+        chatBubble.SetActive(true);
     }
 
     // Update is called once per frame
