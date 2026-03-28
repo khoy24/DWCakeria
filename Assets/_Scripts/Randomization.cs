@@ -37,7 +37,10 @@ public class Randomization : MonoBehaviour
         string randomTier = tierOptions[Random.Range(0, tierOptions.Length)];
         string randomToppings = toppingsOptions[Random.Range(0, toppingsOptions.Length)];
 
-        Debug.Log("Hello. Could I get a " + randomTier + " cake with a " + randomBase + " base with " + randomFrosting + " frosting.");
+        string order = "Hello. Could I get a " + randomTier + " cake with a " + randomBase + " base with " + randomFrosting + " frosting.";
+        Debug.Log(order);
+
+        return order;
     }
 
     public void spawnNewCustomer() {
