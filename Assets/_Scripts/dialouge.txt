@@ -1,1 +1,0 @@
-Hello. Could I get a {randomtier} cake with a {randombase} base with {randomfrosting} frosting. 
