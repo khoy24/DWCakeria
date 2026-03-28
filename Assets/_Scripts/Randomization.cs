@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class Randomization : MonoBehaviour
 {
+    //spawnNewCustomer
+    public Sprites[] customerSprites;
+    public SpriteRenderer displayRenderer;
+
+    //generateOrder()
     public TextAsset baseFile;
     public TextAsset frostingFile;
     public TextAsset tierFile;
@@ -10,6 +15,7 @@ public class Randomization : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        spawnNewCustomer();
         generateOrder();  
     }
 
@@ -26,6 +32,12 @@ public class Randomization : MonoBehaviour
         string randomToppings = toppingsOptions[Random.Range(0, toppingsOptions.Length)];
 
         Debug.Log("Hello. Could I get a " + randomTier + " cake with a " + randomBase + " base with " + randomFrosting + " frosting.");
+    }
+
+    public void spawnNewCustomer() {
+        Sprite randomSprite = customerSprites[Random.Range(0, customerSprites.Length)].sprite;
+        displayRenderer.sprite = customerSprites[randomSprite];
+        Debug.Log("A new customer has arrived!");
     }
 
     // Update is called once per frame
