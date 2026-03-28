@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Randomization : MonoBehaviour
 {
     //spawnNewCustomer
     public Sprite[] customerSprites;
-    public SpriteRenderer displayRenderer;
+    public Image displayRenderer;
 
     //generateOrder()
     public TextAsset baseFile;
@@ -21,10 +22,10 @@ public class Randomization : MonoBehaviour
 
     public void generateOrder()
     {
-        string[] baseOptions = baseFile.text.Split('\n');
-        string[] frostingOptions = frostingFile.text.Split('\n');
-        string[] tierOptions = tierFile.text.Split('\n');
-        string[] toppingsOptions = toppingsFile.text.Split('\n');
+        string[] baseOptions = baseFile.text.Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
+        string[] frostingOptions = frostingFile.text.Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
+        string[] tierOptions = tierFile.text.Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
+        string[] toppingsOptions = toppingsFile.text.Split(new[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
 
         string randomBase = baseOptions[Random.Range(0, baseOptions.Length)];
         string randomFrosting = frostingOptions[Random.Range(0, frostingOptions.Length)];
